@@ -180,6 +180,7 @@ module Homebrew
           "libecomlodr.dylib", # Symantec Endpoint Protection
           "libsymsea*.dylib", # Symantec Endpoint Protection
           "sentinel.dylib", # SentinelOne
+          "libaws-cpp-sdk-*.dylib", #AWS SDK for C++
         ]
 
         __check_stray_files "/usr/local/lib", "*.dylib", white_list, <<~EOS
@@ -227,6 +228,7 @@ module Homebrew
           "osxfuse.pc", # OSXFuse
           "libntfs-3g.pc", # NTFS-3G
           "libublio.pc", # NTFS-3G
+          "aws-cpp-sdk-*.pc", #AWS SDK for C++
         ]
 
         __check_stray_files "/usr/local/lib/pkgconfig", "*.pc", white_list, <<~EOS
@@ -267,6 +269,8 @@ module Homebrew
           "osxfuse/**/*.h", # OSXFuse
           "ntfs/**/*.h", # NTFS-3G
           "ntfs-3g/**/*.h", # NTFS-3G
+          "aws/**/*.h", #AWS SDK for C++
+          
         ]
 
         __check_stray_files "/usr/local/include", "**/*.h", white_list, <<~EOS
