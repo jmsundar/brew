@@ -3,7 +3,6 @@ require "development_tools"
 require "os/mac/version"
 require "os/mac/xcode"
 require "os/mac/xquartz"
-require "os/mac/pathname"
 require "os/mac/sdk"
 require "os/mac/keg"
 
@@ -202,6 +201,7 @@ module OS
       "8.3.3" => { clang: "8.1", clang_build: 802 },
       "9.0"   => { clang: "9.0", clang_build: 900 },
       "9.0.1" => { clang: "9.0", clang_build: 900 },
+      "9.1"   => { clang: "9.0", clang_build: 900 },
     }.freeze
 
     def compilers_standard?
